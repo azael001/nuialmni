@@ -65,8 +65,12 @@ export default function EjGestos() {
       } 
        else if(label==='point'){
         console.log('apuntar')
-        setIsPointing((prev) => !prev)
-      
+        if(isPointing){
+          setIsPointing(false)
+        }
+        else {
+          setIsPointing(true)
+        }
        }
       else 
       {
